@@ -1,4 +1,4 @@
-# SLC-CH7-Sample
+# SCL-CH7-Sample
 
 
 
