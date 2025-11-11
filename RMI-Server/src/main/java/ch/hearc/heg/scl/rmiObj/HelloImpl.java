@@ -10,6 +10,16 @@ public class HelloImpl extends UnicastRemoteObject implements Hello {
 
     @Override
     public String sayHello() throws RemoteException {
-        return "Hello World!";
+        return "Matthieu tu me brises les ovaires 🤌🤌🤌🤌🤌🤌🤌🤌🤌!";
+    }
+
+    @Override
+    public String giveDate() throws RemoteException {
+        return "";
+    }
+
+    @Override
+    public String countDate() throws RemoteException {
+        return "";
     }
 }
