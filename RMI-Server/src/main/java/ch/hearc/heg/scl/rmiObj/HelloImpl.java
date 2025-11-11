@@ -2,6 +2,8 @@ package ch.hearc.heg.scl.rmiObj;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /* UnicastRemoteObject est une classe abstraite qui permet de créer des objets distants */
 public class HelloImpl extends UnicastRemoteObject implements Hello {
@@ -17,9 +19,10 @@ public class HelloImpl extends UnicastRemoteObject implements Hello {
 
     @Override
     public String giveDate() throws RemoteException {
-
+        LocalDateTime now = LocalDateTime.now();
+        String formattedNow = now.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - H:m"));
         this.counter++;
-        return "";
+        return formattedNow;
     }
 
     @Override
