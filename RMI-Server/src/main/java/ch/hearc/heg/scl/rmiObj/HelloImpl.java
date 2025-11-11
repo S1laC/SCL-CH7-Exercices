@@ -18,7 +18,7 @@ public class HelloImpl extends UnicastRemoteObject implements Hello {
     @Override
     public String giveDate() throws RemoteException {
         LocalDateTime now = LocalDateTime.now();
-        String formattedNow = now.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - H:m"));
+        String formattedNow = now.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm"));
         return formattedNow;
     }
 
@@ -26,4 +26,5 @@ public class HelloImpl extends UnicastRemoteObject implements Hello {
     public String countDate() throws RemoteException {
         return "";
     }
+
 }
