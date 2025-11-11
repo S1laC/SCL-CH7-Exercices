@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Chercher comment faire ça -->
+        <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@//localhost:1521/XEPDB1</property>
+        <property name="hibernate.connection.username">${db.user}</property>
+        <property name="hibernate.connection.password">${db.pass}</property>
+
+        <!-- choses que je comprends pas :
+        - Connection Pool Size ?
+        - No Current session ?
+        - configuration du dialecte? est-ce juste ? comment je fais pour savoir ?
+        -->
+
+        <!-- configuration -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Entities mapping 🥰🥰🥰🥰🥰🥰 -->
+        <mapping class="ch.hearc.ig.business.Country"/>
+        <mapping class="ch.hearc.ig.business.WeatherStation"/>
+        <mapping class="ch.hearc.ig.business.Weather"/>
+
+    </session-factory>
+</hibernate-configuration>
