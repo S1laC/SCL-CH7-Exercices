@@ -26,5 +26,4 @@ public class HelloImpl extends UnicastRemoteObject implements Hello {
     public String countDate() throws RemoteException {
         return "";
     }
-
 }

@@ -9,7 +9,7 @@ import java.rmi.registry.Registry;
 
 public class Main {
     public static void main(String[] args) {
-        String host = "localhost";
+        String host = "157.26.104.116";
         int port = 1099;
 
         try {
