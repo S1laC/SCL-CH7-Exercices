@@ -20,6 +20,9 @@ public class Main {
 
             /* Appel de la méthode distante */
             System.out.println(obj.sayHello());
+
+            // TODO chopper l'objet OpenWeather et faire les appels de méthodes
+
         } catch (RemoteException | NotBoundException e) {
             throw new RuntimeException(e);
         }

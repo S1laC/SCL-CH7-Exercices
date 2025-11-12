@@ -27,7 +27,8 @@ public class OpenWeather implements IOpenWeather{
             }
             try {
                 WeatherStation station = manager.call(this.latitude, this.longitude);
-                // ...
+                // ... créer un String unique avec toutes les données que l'on veut retourner
+                // response = "gnagnagna" + station.getGnagnagna + ...
             } catch (Exception e){
                 e.printStackTrace();
             }
@@ -36,6 +37,7 @@ public class OpenWeather implements IOpenWeather{
     }
     @Override
     public List<String> getStations() {
+        // Retourner les stations, soit une liste des noms ou une map avec les ids... whatever
         return List.of();
     }
 }
