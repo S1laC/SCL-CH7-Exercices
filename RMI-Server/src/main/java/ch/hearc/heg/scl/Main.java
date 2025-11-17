@@ -18,6 +18,7 @@ public class Main {
             /* Enregistrement de l'objet distant dans le registre */
             reg.rebind("HelloService", obj);
 
+            // TODO enregistrer l'objet OpenWeather
             System.out.println("Serveur prêt");
         } catch (RemoteException e) {
             throw new RuntimeException(e);
