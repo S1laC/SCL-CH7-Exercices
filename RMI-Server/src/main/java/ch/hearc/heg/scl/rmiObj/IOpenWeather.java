@@ -1,10 +1,12 @@
 package ch.hearc.heg.scl.rmiObj;
 
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 import java.util.List;
 
-public interface IOpenWeather {
-    void setLatitude(Double latitude);
-    void setLongitude(Double longitude);
-    String getWeather();
-    List<String> getStations();
+public interface IOpenWeather extends Remote {
+    void setLatitude(Double latitude) throws RemoteException;
+    void setLongitude(Double longitude)throws RemoteException;
+    String getWeather() throws RemoteException;
+    List<String> getStations() throws RemoteException;
 }

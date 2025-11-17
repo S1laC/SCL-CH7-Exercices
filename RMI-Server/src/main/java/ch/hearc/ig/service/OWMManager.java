@@ -9,6 +9,7 @@ import ch.hearc.ig.tools.Log;
 import ch.hearc.ig.tools.Request;
 import org.hibernate.Session;
 
+import java.rmi.Remote;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

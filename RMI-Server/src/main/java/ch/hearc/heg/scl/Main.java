@@ -1,6 +1,8 @@
 package ch.hearc.heg.scl;
 
 import ch.hearc.heg.scl.rmiObj.HelloImpl;
+import ch.hearc.heg.scl.rmiObj.OpenWeather;
+import ch.hearc.ig.service.OWMManager;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -13,10 +15,10 @@ public class Main {
             Registry reg = LocateRegistry.createRegistry(1099);
 
             /* Création de l'objet distant */
-            HelloImpl obj = new HelloImpl();
+            OpenWeather obj = new OpenWeather();
 
             /* Enregistrement de l'objet distant dans le registre */
-            reg.rebind("HelloService", obj);
+            reg.rebind("OpenWeatherMap", obj);
 
             // TODO enregistrer l'objet OpenWeather
             System.out.println("Serveur prêt");
