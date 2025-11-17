@@ -18,7 +18,7 @@ public class OpenWeather implements IOpenWeather{
         this.longitude = longitude;
     }
     public String getWeather() {
-        String response;
+        String response = "";
         if (this.latitude == null || this.longitude == null){
             response = "Vous devez d'abord définir des coordonnées GPS pour obtenir des données météo";
         } else {
@@ -28,12 +28,12 @@ public class OpenWeather implements IOpenWeather{
             try {
                 WeatherStation station = manager.call(this.latitude, this.longitude);
                 // ... créer un String unique avec toutes les données que l'on veut retourner
-                // response = "gnagnagna" + station.getGnagnagna + ...
+                response = station.getName() + ":" + station.getWeather();
             } catch (Exception e){
                 e.printStackTrace();
             }
         }
-        return "";
+        return response;
     }
     @Override
     public List<String> getStations() {

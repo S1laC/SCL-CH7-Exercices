@@ -79,6 +79,11 @@ public class Weather implements Serializable {
         this.rain = rain;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Le %s : %s, %.2f°C, %d hPa, %d%% humidité", dt.toString(), description, temp, pressure, humidity);
+    }
+
 }
 
 
